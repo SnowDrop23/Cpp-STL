@@ -1,1 +1,1 @@
-# linked-list.
+# C++ STL(Standard Template Library).
