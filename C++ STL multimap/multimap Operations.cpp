@@ -13,7 +13,7 @@ int main()
 	m.emplace("pen", 14);
 	m.insert(pair <string, int> ("pencil", 20)); //two ways of initializing multimap
 	
-	m.emplace("pencil", 30); // Updating Elements, keys cant be changed once added tp the map.
+	m.emplace("pencil", 30); // we can initialize same key with multiple times in multimap, its valid
 
 	m.insert(pair<string, int> ("book", 120)); //inserting a pair
 
