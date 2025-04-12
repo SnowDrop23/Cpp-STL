@@ -12,16 +12,16 @@ int main()
 	m.emplace("pen", 10);
 	m.emplace("pen", 14);
 	m.insert(pair <string, int> ("pencil", 20)); //two ways of initializing multimap
-	
-	m.emplace("pencil", 30); // we can initialize same key with multiple times in multimap, its valid
+	m.emplace("pencil", 30); //duplicate keys allowed in multimap
 
-	m.insert(pair<string, int> ("book", 120)); //inserting a pair
+	m.insert(pair<string, int> ("book", 120)); //another way to insert
+	//insert() takes a single pair as its argument, not two separate values. That's why to initialize use make_pair()
 
 	//finding element
 	if((m.find("pencil") != m.end())) cout << "Found!\n";
 	else cout << "Not found!\n";
 	
-	//removing key
+	//removing all entries with key "pencil"
 	m.erase("pencil");
 
 	//size of the map
@@ -37,7 +37,7 @@ int main()
 	cout << i->first << " " << (*i).second << endl; //here is two way to access
 
 	m.clear();
-	if(m.empty() == true) cout << "Map is empty now!";
-	else cout << "Not empty.";
+	if(m.empty() == true) cout << "Map is empty now!\n";
+	else cout << "\nNot empty.";
 	
 }
