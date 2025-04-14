@@ -1,5 +1,4 @@
 
-
 #include <iostream>
 #include <set>
 using namespace std;
@@ -47,21 +46,26 @@ int main()
 	cout << "\n[Ranged-based for loop output]\n";
 	for(int i : s1) cout << i << " ";
 
-	cout << "\n[Iterator-based for loop output]\n";
+	cout << "\n\n[Iterator-based for loop output]\n";
 	for(auto i = s1.begin(); i != s1.end(); i++) 
 	    cout << *i << " ";
 
-	cout << "\n[Elements in reversed order]\n";
+	cout << "\n\n[Elements in reversed order]\n";
 	for(auto i = s1.rbegin(); i != s1.rend(); i++)
 	    cout << *i << " ";
 	
 	//swapping multisets
 	s2.swap(s1);
-	cout << "\n[Elements of s2 after swapping]\n";
+	cout << "\n\n[Elements of s2 after swapping]\n";
 	for(int i : s2) cout << i << " ";
 
-	if(s1.empty()) cout << "\ns1 is empty now!" << endl;
+	if(s1.empty()) cout << "\n\ns1 is empty now!" << endl;
 	else cout << "\ns1 is not empty.\n";
+
+	//removing all elements of s2
+	s2.clear();
+	if(s2.empty()) cout << "\ns2 is empty now!" << endl;
+	else cout << "\ns2 is not empty.\n";
 
 
  	
